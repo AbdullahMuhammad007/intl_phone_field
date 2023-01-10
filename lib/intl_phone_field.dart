@@ -386,6 +386,8 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
       decoration: widget.decoration.copyWith(
         prefixIcon: _buildFlagsButton(),
         counterText: !widget.enabled ? '' : null,
+         hintText: _selectedCountry.code.toLowerCase() == 'eg' ? '1xxxxxxxxx' : "5xxxxxxxx",
+        hintStyle: TextStyle(color: Colors.grey.withOpacity(0.4)),
       ),
       style: widget.style,
       onSaved: (value) {
